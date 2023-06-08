@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hacker Man</title>
+    <style>
+        
+        body{
+            background:black;
+            background-repeat: no-repeat;
+            background-size: 80vw 80vh;
+            
+        }
+        #text{
+            display: flex;
+            justify-content: center;
+            margin: auto;
+            font-size: 22px;
+            color: rgb(49, 232, 49);
+        }
+    </style>
+</head>
+<body>
+    <div id="text"></div>
+    <script>
+        let data= document.getElementById('text');
+        let arr = ['Initializating Hack tool..............',
+        'Connecting to Facebook..............',
+        'Connecting to server 1..............',
+        'connection fail. Retrying..............',
+        'Connecting to server 2..............',
+        'connecting Sucessfully..............',
+         'Username I am shreyash..............',
+        'Trying Brute Force..............',
+         '200K password tried..............',
+        'Match is not Found..............',
+        'Trying Brute Force..............',
+         '200K password tried..............',
+        'Match is  Found..............',
+        'Now your acount is heacke sucessful by heacker shreyash..............'
+        ]
+        const sleep = async(second)=>{
+            return new Promise((resolve, reject) => {
+                setTimeout(()=>{resolve(true)},second*1000)
+            })
+        }
+        const showHack = async (message)=>{
+            await sleep(1)
+            data.innerHTML= data.innerHTML + message+'<br>'+'<br>'
+        }
+        (async () => {
+          for(let i = 0;i<arr.length;i++){
+            await(showHack(arr[i]))
+          }
+         })();
+
+    </script>
+</body>
+</html>
